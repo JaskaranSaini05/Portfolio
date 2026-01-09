@@ -1,4 +1,3 @@
-import React from 'react'
 import { Target, Code, Heart } from 'lucide-react'
 
 const About = () => {
@@ -28,9 +27,9 @@ const About = () => {
             <p className="text-slate-700 leading-relaxed text-justify">
               I have completed my Bachelor of Computer Applications (BCA) from Gujranwala Guru Nanak Khalsa College, Ludhiana, affiliated with Panjab University. I am passionate about building technology that solves real-world problems and delivers meaningful impact.
 
-I enjoy working with React for frontend development and currently, I am working as a Flutter Developer Intern at Auribises Technologies Pvt. Ltd. I have strong experience in building clean, responsive, and user-friendly applications.
+              I enjoy working with React for frontend development and currently, I am working as a Flutter Developer Intern at Auribises Technologies Pvt. Ltd. I have strong experience in building clean, responsive, and user-friendly applications.
 
-I am skilled in Flutter development, frontend technologies, and UI/UX design, with a focus on creating scalable and user-centric solutions. I aim to combine good design with solid functionality to build products that are practical, modern, and easy to use.
+              I am skilled in Flutter development, frontend technologies, and UI/UX design, with a focus on creating scalable and user-centric solutions. I aim to combine good design with solid functionality to build products that are practical, modern, and easy to use.
             </p>
           </div>
 
@@ -38,9 +37,24 @@ I am skilled in Flutter development, frontend technologies, and UI/UX design, wi
           <div className="bg-slate-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <svg
+                  className="w-7 h-7 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 14l9-5-9-5-9 5 9 5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-slate-900">
