@@ -29,11 +29,13 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="text-xl sm:text-2xl font-bold text-slate-900">
+          {/* NAME ONLY */}
+          <span className="text-xl sm:text-2xl font-bold text-slate-900">
             Jaskaran Singh Saini
-          </div>
+          </span>
 
-          <nav className="hidden lg:flex items-center gap-6">
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -47,14 +49,15 @@ const Navbar = () => {
 
             <a
               href="/resume.pdf"
-              download="Jaskaran_Saini_Resume.pdf"
-              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition"
+              download
+              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
             >
               <Download size={16} />
               Resume
             </a>
           </nav>
 
+          {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden p-2 rounded-lg hover:bg-slate-200"
@@ -63,12 +66,13 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* MOBILE MENU */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             open ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-slate-100 rounded-xl p-4 space-y-3 mb-4">
+          <div className="bg-slate-100 rounded-xl p-4 space-y-4 mb-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -82,8 +86,8 @@ const Navbar = () => {
 
             <a
               href="/resume.pdf"
-              download="Jaskaran_Saini_Resume.pdf"
-              className="flex items-center justify-center gap-2 mt-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
+              download
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
             >
               <Download size={16} />
               Resume

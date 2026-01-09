@@ -8,6 +8,7 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT CONTENT */}
           <div className="space-y-8">
             <div>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">
@@ -41,11 +42,9 @@ const Hero = () => {
               </p>
             </div>
 
-            <div>
-              <p className="text-xl text-slate-700 font-medium">
-                Turning ideas into interactive, data-driven solutions.
-              </p>
-            </div>
+            <p className="text-xl text-slate-700 font-medium">
+              Turning ideas into interactive, data-driven solutions.
+            </p>
 
             <div className="flex flex-wrap gap-4">
               <a
@@ -63,14 +62,19 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* RIGHT IMAGE */}
           <div className="relative flex items-center justify-center">
             <div className="relative">
-              <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-8 border-blue-500 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-blue-600">JS</span>
-                </div>
+              {/* PROFILE IMAGE */}
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-8 border-blue-600 shadow-2xl">
+                <img
+                  src="/profile.jpg"
+                  alt="Jaskaran Singh Saini"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
+              {/* FLOATING ICONS */}
               <div className="absolute -top-6 -right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-xl animate-bounce">
                 <Code className="w-8 h-8 text-white" />
               </div>
