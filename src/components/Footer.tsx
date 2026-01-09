@@ -32,14 +32,12 @@ const Footer = () => {
     if (href.startsWith('#')) {
       e.preventDefault()
       const el = document.querySelector(href) as HTMLElement | null
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-slate-900 text-slate-300 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -53,7 +51,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -70,19 +70,25 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Let's Connect
+            </h4>
             <ul className="space-y-3">
               {contactInfo.map((item, index) => {
-                const IconComponent = item.icon
+                const Icon = item.icon
                 return (
                   <li key={index}>
                     <a
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
-                      rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      rel={
+                        item.href.startsWith('http')
+                          ? 'noopener noreferrer'
+                          : undefined
+                      }
                       className="flex items-center gap-3 text-slate-400 hover:text-blue-400 transition"
                     >
-                      <IconComponent size={18} />
+                      <Icon size={18} />
                       <span className="text-sm">{item.text}</span>
                     </a>
                   </li>
@@ -92,7 +98,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-slate-400 text-sm">
             © 2025 Jaskaran Singh Saini
           </p>

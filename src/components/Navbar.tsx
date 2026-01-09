@@ -29,7 +29,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* NAME ONLY */}
+          {/* NAME */}
           <span className="text-xl sm:text-2xl font-bold text-slate-900">
             Jaskaran Singh Saini
           </span>
@@ -47,9 +47,11 @@ const Navbar = () => {
               </a>
             ))}
 
+            {/* DESKTOP RESUME */}
             <a
               href="/resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
             >
               <Download size={16} />
@@ -84,9 +86,11 @@ const Navbar = () => {
               </a>
             ))}
 
+            {/* MOBILE RESUME */}
             <a
               href="/resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
             >
               <Download size={16} />

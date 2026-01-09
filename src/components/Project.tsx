@@ -50,7 +50,7 @@ const Projects = () => {
         'Provider / State Management',
         'Material UI',
       ],
-      image: '/eventify.jpg',
+      image: '/project2.png',
       githubLink: 'https://github.com/JaskaranSaini05/Eventify',
     },
   ]
