@@ -73,25 +73,26 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-out"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className={`${category.color} w-12 h-12 rounded-xl flex items-center justify-center`}>
-                    <IconComponent className="w-6 h-6 text-white" />
+                  <div className={`${category.color} w-14 h-14 rounded-xl flex items-center justify-center shadow-md`}>
+                    <IconComponent className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900">
+                  <h3 className="text-xl font-bold text-slate-900">
                     {category.title}
                   </h3>
                 </div>
 
-                <ul className="space-y-3">
+                {/* TWO COLUMN LAYOUT */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
                   {category.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-slate-700">
+                    <div key={idx} className="flex items-center gap-2 text-slate-700">
                       <span className={`w-2 h-2 ${category.color} rounded-full flex-shrink-0`}></span>
-                      <span>{item}</span>
-                    </li>
+                      <span className="text-sm">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )
           })}

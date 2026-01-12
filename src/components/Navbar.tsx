@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, Download } from 'lucide-react'
+import { Menu, X, Download, Linkedin, Github } from 'lucide-react'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -29,10 +29,34 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* NAME */}
-          <span className="text-xl sm:text-2xl font-bold text-slate-900">
-            Jaskaran Singh Saini
-          </span>
+
+          {/* NAME + SOCIAL ICONS */}
+          <div className="flex items-center gap-4">
+            <span className="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-600 transition cursor-pointer">
+              Jaskaran Singh Saini
+            </span>
+
+            {/* SOCIAL LINKS */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://linkedin.com/in/jaskaran-singh-1507592a7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110"
+              >
+                <Linkedin size={20} />
+              </a>
+
+              <a
+                href="https://github.com/JaskaranSaini05"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-700 hover:text-gray-900 transition transform hover:scale-110"
+              >
+                <Github size={20} />
+              </a>
+            </div>
+          </div>
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-10">
@@ -41,7 +65,10 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className="text-slate-700 font-medium hover:text-blue-600 transition"
+                className="relative text-slate-700 font-medium transition hover:text-blue-600
+                           after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                           after:bg-blue-600 after:transition-all after:duration-300
+                           hover:after:w-full"
               >
                 {item.name}
               </a>
@@ -52,7 +79,9 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
+              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white
+                         font-semibold rounded-lg transition
+                         hover:bg-blue-700 hover:scale-105"
             >
               <Download size={16} />
               Resume
@@ -62,7 +91,7 @@ const Navbar = () => {
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 rounded-lg hover:bg-slate-200"
+            className="lg:hidden p-2 rounded-lg hover:bg-slate-200 transition"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -80,18 +109,41 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className="block text-slate-700 font-medium hover:text-blue-600"
+                className="block text-slate-700 font-medium transition hover:text-blue-600"
               >
                 {item.name}
               </a>
             ))}
+
+            {/* MOBILE SOCIAL LINKS */}
+            <div className="flex items-center justify-center gap-6 pt-2">
+              <a
+                href="https://linkedin.com/in/jaskaran-singh-1507592a7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-700 hover:text-blue-600 transition transform hover:scale-110"
+              >
+                <Linkedin size={22} />
+              </a>
+
+              <a
+                href="https://github.com/JaskaranSaini05"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-700 hover:text-gray-900 transition transform hover:scale-110"
+              >
+                <Github size={22} />
+              </a>
+            </div>
 
             {/* MOBILE RESUME */}
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
+              className="flex items-center justify-center gap-2 px-6 py-3
+                         bg-blue-600 text-white font-semibold rounded-lg
+                         transition hover:bg-blue-700 hover:scale-105"
             >
               <Download size={16} />
               Resume

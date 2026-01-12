@@ -30,12 +30,15 @@ const Experience = () => {
                     Flutter Developer Intern
                   </h3>
                   <p className="text-base text-slate-600">
-                    Auribises Technologies Pvt Ltd
+                    Auribises Technologies Pvt. Ltd.
+                  </p>
+                  <p className="text-sm text-slate-500 mt-1">
+                    Ludhiana, Punjab
                   </p>
                 </div>
               </div>
               <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-semibold text-sm whitespace-nowrap self-start">
-                Aug 2025 - Present
+                August 2025 - Present
               </div>
             </div>
 
@@ -45,15 +48,13 @@ const Experience = () => {
               </h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'React.js',
-                  'TypeScript',
                   'Flutter',
                   'Dart',
                   'Firebase',
-                  'Authentication',
-                  'Cloud Firestore',
-                  'REST API',
-                  'Android Studio',
+                  'Cloud Storage',
+                  'REST APIs',
+                  'React',
+                  'TypeScript',
                   'Payment Integration',
                 ].map((tech) => (
                   <span
@@ -68,13 +69,10 @@ const Experience = () => {
 
             <ul className="space-y-4">
               {[
-                'Contributed to the development of a full-stack application, working on both frontend and backend components.',
-                'Built user-friendly UI using Flutter with clean and responsive design principles.',
-                'Integrated REST APIs to connect frontend with backend services seamlessly.',
-                'Worked on backend logic, data handling, and API integration to ensure smooth functionality.',
-                'Managed authentication and user data using Firebase backend services.',
-                'Collaborated with the team to design, develop, and debug features efficiently.',
-                'Improved app performance and reliability through comprehensive testing and fixes.',
+                'Collaborated with cross-functional teams to design and develop scalable Flutter mobile applications, improving overall app performance by implementing efficient state management solutions.',
+                'Built reusable, modular UI components following Flutter best practices and Material Design guidelines, enhancing code maintainability and reducing development time by 30%.',
+                'Integrated Firebase Authentication, Firestore database, and Cloud Storage to enable secure user authentication, real-time data synchronization, and efficient media management.',
+                'Implemented RESTful API integration and payment gateway solutions to facilitate seamless user transactions.',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3 text-slate-700">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>

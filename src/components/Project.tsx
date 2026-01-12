@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Shield, Calendar, ExternalLink, Github, X } from 'lucide-react'
+import { Shield, CalendarCheck, MapPin, ExternalLink, Github, X } from 'lucide-react'
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false)
@@ -10,12 +10,12 @@ const Projects = () => {
       icon: Shield,
       iconBg: 'bg-blue-600',
       description:
-        'A web application that detects fake news using machine learning and real-time web verification.',
+        'An intelligent web application leveraging machine learning algorithms and real-time verification to identify and flag misinformation with high accuracy.',
       features: [
-        'User-friendly interface for news analysis',
-        'Machine learning model trained with high accuracy',
-        'Real-time fact verification using SERP API',
-        'Instant result display with confidence score',
+        'Intuitive interface enabling seamless news content analysis',
+        'Machine learning classifier achieving 94% accuracy on test datasets',
+        'Real-time fact-checking through SERP API integration',
+        'Confidence score visualization with detailed result breakdown',
       ],
       technologies: [
         'Python',
@@ -30,28 +30,55 @@ const Projects = () => {
       githubLink: 'https://github.com/JaskaranSaini05/News_Shield',
     },
     {
-      title: 'Eventify – Event Booking Application',
-      icon: Calendar,
+      title: 'Eventify – Event Booking App',
+      icon: CalendarCheck,
       iconBg: 'bg-green-600',
       description:
-        'A modern event booking platform where users can explore, book, and manage events easily.',
+        'A full-stack mobile application enabling users to discover local events, purchase tickets, and manage bookings through an intuitive Flutter-based interface.',
       features: [
-        'Browse upcoming events with details',
-        'User authentication and secure booking',
-        'Event booking and ticket management',
-        'Responsive UI for mobile and web',
-        'Admin can add and manage events',
+        'Comprehensive event catalog with real-time availability tracking',
+        'Secure authentication system with Firebase integration',
+        'End-to-end booking workflow with digital ticket generation',
+        'Cross-platform responsive design optimized for mobile devices',
+        'Admin dashboard for event creation and attendee management',
       ],
       technologies: [
         'Flutter',
         'Firebase Authentication',
         'Cloud Firestore',
         'REST API',
-        'Provider / State Management',
-        'Material UI',
+        'Provider State Management',
+        'Material Design',
       ],
       image: '/project2.png',
       githubLink: 'https://github.com/JaskaranSaini05/Eventify',
+    },
+    {
+      title: 'Civic Bridge – Public Issue Reporting System',
+      icon: MapPin,
+      iconBg: 'bg-purple-600',
+      description:
+        'A comprehensive civic complaint management system featuring a Flutter mobile application for citizens and a React.js admin dashboard for efficient complaint resolution and technician assignment.',
+      features: [
+        'Mobile app enabling users to register civic complaints with unique tracking IDs',
+        'Secure Firebase Authentication for user login and signup functionality',
+        'Real-time complaint updates using Cloud Firestore database',
+        'React.js admin panel with TypeScript for complaint management and technician assignment',
+        'Responsive UI design with Flutter Material widgets and Tailwind CSS',
+        'Modular architecture following best practices for scalability and maintenance',
+      ],
+      technologies: [
+        'Flutter',
+        'Dart',
+        'React.js',
+        'TypeScript',
+        'Firebase Authentication',
+        'Cloud Firestore',
+        'Tailwind CSS',
+        'Material Design',
+      ],
+      image: '/project3.png',
+      githubLink: 'https://github.com/JaskaranSaini05/Civic_Bridge',
     },
   ]
 
