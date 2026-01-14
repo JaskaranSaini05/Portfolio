@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, Download, Linkedin, Github } from 'lucide-react'
+import { Menu, X, Download, Linkedin, Github, Mail } from 'lucide-react'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -30,14 +30,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-          {/* NAME + SOCIAL ICONS */}
           <div className="flex items-center gap-4">
-            <span className="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-600 transition cursor-pointer">
+            <span className="text-xl sm:text-2xl font-bold text-slate-900">
               Jaskaran Singh Saini
             </span>
 
-            {/* SOCIAL LINKS */}
-            <div className="flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-3">
               <a
                 href="https://linkedin.com/in/jaskaran-singh-1507592a7"
                 target="_blank"
@@ -55,10 +53,16 @@ const Navbar = () => {
               >
                 <Github size={20} />
               </a>
+
+              <a
+                href="mailto:your.email@example.com"
+                className="text-slate-700 hover:text-red-600 transition transform hover:scale-110"
+              >
+                <Mail size={20} />
+              </a>
             </div>
           </div>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
               <a
@@ -74,7 +78,6 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* DESKTOP RESUME */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -88,7 +91,6 @@ const Navbar = () => {
             </a>
           </nav>
 
-          {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden p-2 rounded-lg hover:bg-slate-200 transition"
@@ -97,7 +99,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* MOBILE MENU */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             open ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
@@ -115,7 +116,6 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* MOBILE SOCIAL LINKS */}
             <div className="flex items-center justify-center gap-6 pt-2">
               <a
                 href="https://linkedin.com/in/jaskaran-singh-1507592a7"
@@ -134,9 +134,15 @@ const Navbar = () => {
               >
                 <Github size={22} />
               </a>
+
+              <a
+                href="mailto:your.email@example.com"
+                className="text-slate-700 hover:text-red-600 transition transform hover:scale-110"
+              >
+                <Mail size={22} />
+              </a>
             </div>
 
-            {/* MOBILE RESUME */}
             <a
               href="/resume.pdf"
               target="_blank"
