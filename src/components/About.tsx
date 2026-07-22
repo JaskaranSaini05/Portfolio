@@ -10,12 +10,10 @@ const About = () => {
       icon: Target,
       iconBg: 'bg-blue-100',
       iconColor: 'text-blue-600',
-      title: 'Mission-Driven Developer',
-      content: `I have completed my Bachelor of Computer Applications (BCA) from Gujranwala Guru Nanak Khalsa College, Ludhiana, affiliated with Panjab University. I am passionate about building technology that solves real-world problems and delivers meaningful impact.
+      title: 'From Software to Security',
+      content: `I hold a Bachelor of Computer Applications (BCA) from Gujranwala Guru Nanak Khalsa College, Ludhiana, affiliated with Panjab University. I later worked as a Software Engineer Intern at Auribises Technologies Pvt. Ltd. (Aug 2025 – Feb 2026), building real applications with Flutter, React, and Firebase.
 
-I enjoy working with React for frontend development and currently, I am working as a Flutter Developer Intern at Auribises Technologies Pvt. Ltd. I have strong experience in building clean, responsive, and user-friendly applications.
-
-I am skilled in Flutter development, frontend technologies, and UI/UX design, with a focus on creating scalable and user-centric solutions. I aim to combine good design with solid functionality to build products that are practical, modern, and easy to use.`,
+That experience taught me how modern software is built — and made me curious about how it can be broken. I've since shifted my focus to cybersecurity, diving into ethical hacking, networking, Linux, and secure systems through hands-on labs and CTFs, with the goal of becoming a skilled cybersecurity professional.`,
     },
     {
       id: 1,
@@ -23,7 +21,9 @@ I am skilled in Flutter development, frontend technologies, and UI/UX design, wi
       iconBg: 'bg-indigo-100',
       iconColor: 'text-indigo-600',
       title: 'Project Experience',
-      content: `I have collaboratively contributed to impactful projects that merge innovation, usability, and data-driven intelligence to address real-world challenges. My work includes developing cross-platform mobile applications, building responsive web interfaces, and creating AI-powered solutions that provide intelligent insights and personalized experiences. These projects reflect my ability to integrate frontend engineering, intuitive design, and applied machine learning into cohesive, impactful digital solutions.`,
+      content: `I've built 5+ projects across mobile, web, and applied AI — including cross-platform Flutter apps, React web applications, full-stack builds, AI-based tools, and Firebase-integrated systems.
+
+My focus has now shifted to cybersecurity projects: vulnerability assessments, web and network security testing, Linux security, Python security scripts, and CTF write-ups — supported by hands-on penetration testing labs.`,
     },
     {
       id: 2,
@@ -31,7 +31,9 @@ I am skilled in Flutter development, frontend technologies, and UI/UX design, wi
       iconBg: 'bg-green-100',
       iconColor: 'text-green-600',
       title: 'Technical Expertise',
-      content: `I'm proficient in mobile app development with Flutter and Dart, frontend development using React, Next.js, and Tailwind CSS, and backend technologies including Node.js, Express.js, and Firebase. I have hands-on experience with building responsive, user-focused interfaces and managing scalable databases with Firebase and MongoDB. Additionally, I leverage TensorFlow, Scikit-Learn, and Python to develop and deploy intelligent models that transform data into actionable insights. My experience across multiple programming languages and frameworks enables me to bridge frontend design, backend logic, and AI-driven functionality into cohesive, high-performing digital solutions.`,
+      content: `Cybersecurity: Vulnerability assessment, web app security testing, network security, Linux security, penetration testing labs, and Python for security scripting.
+
+Development Background: Flutter, React, Next.js, Tailwind CSS, Node.js, Express.js, Firebase, and MongoDB — plus applied AI experience with TensorFlow and Scikit-Learn, giving me a builder's perspective on where and why vulnerabilities exist.`,
     },
     {
       id: 3,
@@ -39,7 +41,9 @@ I am skilled in Flutter development, frontend technologies, and UI/UX design, wi
       iconBg: 'bg-pink-100',
       iconColor: 'text-pink-600',
       title: 'Beyond Code',
-      content: `When I'm not immersed in code, I love challenging myself through data structures and algorithms on platforms like LeetCode and HackerRank, constantly refining my problem-solving mindset. I enjoy exploring UI/UX design principles, contributing to open-source projects, and staying ahead of emerging technologies through hackathons, tech communities, and collaborative learning experiences. Outside of tech, you'll often find me exploring creative hobbies, staying active with sports, or discovering new music—activities that keep me energized and inspired.`,
+      content: `Most of my free time goes into CTF challenges, ethical hacking practice, and cybersecurity research — reading write-ups, following disclosed vulnerabilities, and getting deeper into Linux and networking. I also write Python scripts to automate parts of my own learning and stay active in open-source and tech communities.
+
+Outside of tech, sports and music are how I recharge — both demand the same focus and repetition that security work does.`,
     },
   ]
 
@@ -85,7 +89,7 @@ I am skilled in Flutter development, frontend technologies, and UI/UX design, wi
             className="text-lg text-slate-600 mt-4 max-w-2xl mx-auto animate-fadeIn"
             style={{ animationDelay: '0.3s' }}
           >
-            A passionate developer crafting meaningful digital experiences
+            An aspiring cybersecurity professional building a future in digital defense
           </p>
         </div>
 

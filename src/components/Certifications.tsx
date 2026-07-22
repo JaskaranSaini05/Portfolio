@@ -17,7 +17,7 @@ const Certifications = () => {
       organization: 'Auribises Technologies Pvt Ltd',
       year: '2025',
       image: '/certificates/auribises.png',
-      certificateLink: '/certificates/ATPL_CC_20250609-PWD-2038.pdf',
+      certificateLink: '/certificates/auribises.pdf',
     },
     {
       title: 'Introduction to Frontend Development',
@@ -33,11 +33,31 @@ const Certifications = () => {
       image: '/certificates/image.png',
       certificateLink: '/certificates/basicincomputingcourse.pdf',
     },
+    {
+      title: 'Software Testing Certification',
+      organization: 'Simplilearn',
+      year: '2025',
+      image: '/certificates/software-testing.png',
+      certificateLink: '/certificates/software-testing-simplilearn.pdf',
+    },
+    {
+      title: 'Project Management',
+      organization: 'Simplilearn',
+      year: '2025',
+      image: '/certificates/project-management-simplilearn.png',
+      certificateLink: '/certificates/project-management-simplilearn.pdf',
+    },
+    {
+      title: 'Search Engine Optimization (SEO)',
+      organization: 'Simplilearn',
+      year: '2025',
+      image: '/certificates/seo-simplilearn.png',
+      certificateLink: '/certificates/seo-simplilearn.pdf',
+    },
   ]
 
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null)
 
-  // Close modal on ESC
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setSelectedCert(null)
@@ -48,12 +68,10 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="py-20 bg-slate-50 relative overflow-hidden">
-      {/* Background blur */}
       <div className="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
       <div className="absolute -bottom-16 -right-24 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +88,6 @@ const Certifications = () => {
           </p>
         </motion.div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <motion.div
@@ -82,7 +99,6 @@ const Certifications = () => {
               whileHover={{ y: -6 }}
               className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300"
             >
-              {/* Image */}
               <div
                 className="relative bg-slate-100 p-4 cursor-pointer group"
                 onClick={() => setSelectedCert(cert)}
@@ -92,27 +108,24 @@ const Certifications = () => {
                   alt={cert.title}
                   className="w-full h-48 object-cover rounded-xl"
                   whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.25 }}
                 />
 
-                {/* Hover overlay */}
                 <div className="absolute inset-0 p-4">
-                  <div className="h-full w-full rounded-xl bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 px-4 py-2 rounded-lg bg-white/90 text-slate-900 font-semibold text-sm shadow">
+                  <div className="h-full w-full rounded-xl bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 px-4 py-2 rounded-lg bg-white/90 text-sm font-semibold shadow">
                       Click to Preview
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center shadow-sm">
                     <Award className="w-6 h-6 text-white" />
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-1 leading-snug">
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-1">
                       {cert.title}
                     </h3>
                     <p className="text-slate-600 text-sm">{cert.organization}</p>
@@ -135,11 +148,9 @@ const Certifications = () => {
         </div>
       </div>
 
-      {/* IMAGE PREVIEW MODAL */}
       <AnimatePresence>
         {selectedCert && (
           <motion.div
-            key="modal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -147,22 +158,19 @@ const Certifications = () => {
             onClick={() => setSelectedCert(null)}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              transition={{ duration: 0.2 }}
+              initial={{ scale: 0.92 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
               className="bg-white rounded-2xl shadow-xl max-w-3xl w-full overflow-hidden relative"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
               <button
                 onClick={() => setSelectedCert(null)}
-                className="absolute top-3 right-3 p-2 rounded-xl bg-white/90 hover:bg-white shadow text-slate-700 hover:text-slate-900 transition"
+                className="absolute top-3 right-3 p-2 rounded-xl bg-white shadow"
               >
                 <X size={18} />
               </button>
 
-              {/* Image */}
               <div className="bg-slate-100 p-4">
                 <img
                   src={selectedCert.image}
@@ -171,28 +179,11 @@ const Certifications = () => {
                 />
               </div>
 
-              {/* Details */}
-              <div className="p-5 border-t border-slate-200">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-900">
-                      {selectedCert.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm">
-                      {selectedCert.organization} • {selectedCert.year}
-                    </p>
-                  </div>
-
-                  <a
-                    href={selectedCert.certificateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition"
-                  >
-                    Open PDF
-                    <ExternalLink size={16} />
-                  </a>
-                </div>
+              <div className="p-5 border-t">
+                <h3 className="font-bold">{selectedCert.title}</h3>
+                <p className="text-sm text-slate-600">
+                  {selectedCert.organization} • {selectedCert.year}
+                </p>
               </div>
             </motion.div>
           </motion.div>
