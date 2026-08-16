@@ -1,5 +1,11 @@
 import { useState } from 'react'
-import { Target, Code, Heart, Sparkles, Lightbulb } from 'lucide-react'
+import {
+  Target,
+  Code,
+  Heart,
+  Sparkles,
+  Lightbulb,
+} from 'lucide-react'
 
 const About = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -11,39 +17,50 @@ const About = () => {
       iconBg: 'bg-blue-100',
       iconColor: 'text-blue-600',
       title: 'From Software to Security',
-      content: `I hold a Bachelor of Computer Applications (BCA) from Gujranwala Guru Nanak Khalsa College, Ludhiana, affiliated with Panjab University. I later worked as a Software Engineer Intern at Auribises Technologies Pvt. Ltd. (Aug 2025 – Feb 2026), building real applications with Flutter, React, and Firebase.
+      content: `I completed my Bachelor of Computer Applications (BCA) from Gujranwala Guru Nanak Khalsa College, Ludhiana.
 
-That experience taught me how modern software is built — and made me curious about how it can be broken. I've since shifted my focus to cybersecurity, diving into ethical hacking, networking, Linux, and secure systems through hands-on labs and CTFs, with the goal of becoming a skilled cybersecurity professional.`,
+I am currently pursuing my Master of Computer Applications (MCA) from 2026–2028, with a growing focus on cybersecurity, networking, Linux, and ethical hacking.
+
+My goal is to build strong technical skills and become a cybersecurity professional.`,
     },
+
     {
       id: 1,
       icon: Lightbulb,
       iconBg: 'bg-indigo-100',
       iconColor: 'text-indigo-600',
-      title: 'Project Experience',
-      content: `I've built 5+ projects across mobile, web, and applied AI — including cross-platform Flutter apps, React web applications, full-stack builds, AI-based tools, and Firebase-integrated systems.
+      title: 'Software & Project Experience',
+      content: `I worked as a Software Engineer Intern at Auribises Technologies Pvt. Ltd. from August 2025 to March 2026.
 
-My focus has now shifted to cybersecurity projects: vulnerability assessments, web and network security testing, Linux security, Python security scripts, and CTF write-ups — supported by hands-on penetration testing labs.`,
+I worked on real-world mobile and web projects using Flutter, React.js, Firebase, MongoDB, and REST APIs.
+
+I also contributed to projects such as Gurbani Made Easy, building Flutter features and working with a team using Jira and Agile practices.`,
     },
+
     {
       id: 2,
       icon: Code,
       iconBg: 'bg-green-100',
       iconColor: 'text-green-600',
-      title: 'Technical Expertise',
-      content: `Cybersecurity: Vulnerability assessment, web app security testing, network security, Linux security, penetration testing labs, and Python for security scripting.
+      title: 'Cybersecurity & Technical Skills',
+      content: `My current focus is cybersecurity, with an interest in network security, vulnerability assessment, web security, Linux, penetration testing, and security scripting with Python.
 
-Development Background: Flutter, React, Next.js, Tailwind CSS, Node.js, Express.js, Firebase, and MongoDB — plus applied AI experience with TensorFlow and Scikit-Learn, giving me a builder's perspective on where and why vulnerabilities exist.`,
+My development background includes Flutter, Dart, React.js, Next.js, Tailwind CSS, Node.js, Express.js, Firebase, and MongoDB.
+
+This development experience helps me understand how applications are built and where security weaknesses can occur.`,
     },
+
     {
       id: 3,
       icon: Heart,
       iconBg: 'bg-pink-100',
       iconColor: 'text-pink-600',
-      title: 'Beyond Code',
-      content: `Most of my free time goes into CTF challenges, ethical hacking practice, and cybersecurity research — reading write-ups, following disclosed vulnerabilities, and getting deeper into Linux and networking. I also write Python scripts to automate parts of my own learning and stay active in open-source and tech communities.
+      title: 'Learning & Beyond Code',
+      content: `I spend my free time improving my cybersecurity skills through CTFs, ethical hacking labs, Linux practice, networking, and security research.
 
-Outside of tech, sports and music are how I recharge — both demand the same focus and repetition that security work does.`,
+I also build small Python scripts to practice automation and security concepts.
+
+Outside technology, I enjoy sports and music, which help me stay focused, consistent, and refreshed.`,
     },
   ]
 
@@ -55,10 +72,12 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-40 -left-20 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
+
         <div
           className="absolute bottom-20 -right-20 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1.5s' }}
         ></div>
+
         <div
           className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-200/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '3s' }}
@@ -66,6 +85,7 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         {/* Section Title */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold animate-fadeIn">
@@ -89,16 +109,17 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
             className="text-lg text-slate-600 mt-4 max-w-2xl mx-auto animate-fadeIn"
             style={{ animationDelay: '0.3s' }}
           >
-            An aspiring cybersecurity professional building a future in digital defense
+            Aspiring cybersecurity professional building a strong foundation
+            in security, networking, and software development.
           </p>
         </div>
 
-        {/* ✅ STATS MOVED HERE (JUST BELOW THE LINE) */}
+        {/* Stats */}
         <div className="mb-14 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { number: '1+', label: 'Years Experience', delay: '0s' },
             { number: '5+', label: 'Projects Completed', delay: '0.1s' },
-            { number: '5+', label: 'Technologies', delay: '0.2s' },
+            { number: '10+', label: 'Technologies', delay: '0.2s' },
             { number: '100%', label: 'Commitment', delay: '0.3s' },
           ].map((stat, index) => (
             <div
@@ -111,7 +132,10 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                 {stat.number}
               </div>
-              <div className="text-slate-600 text-sm font-medium">{stat.label}</div>
+
+              <div className="text-slate-600 text-sm font-medium">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
@@ -132,10 +156,13 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
                   animation: `slideUp 0.6s ease-out ${index * 0.15}s both`,
                 }}
               >
+                {/* Card Header */}
                 <div className="flex items-center gap-4 mb-6">
                   <div
                     className={`w-14 h-14 ${card.iconBg} rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 ${
-                      isHovered ? 'scale-110 rotate-6 shadow-lg' : ''
+                      isHovered
+                        ? 'scale-110 rotate-6 shadow-lg'
+                        : ''
                     }`}
                   >
                     <IconComponent
@@ -150,12 +177,12 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
                   </h3>
                 </div>
 
+                {/* Card Content */}
                 <div className="relative">
                   <p className="text-slate-700 leading-relaxed whitespace-pre-line">
                     {card.content}
                   </p>
 
-                  {/* Animated Gradient Overlay on Hover */}
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                 </div>
 
@@ -167,12 +194,14 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
         </div>
       </div>
 
+      {/* Animations */}
       <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
             transform: translateY(-10px);
           }
+
           to {
             opacity: 1;
             transform: translateY(0);
@@ -184,6 +213,7 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
             opacity: 0;
             transform: translateY(40px);
           }
+
           to {
             opacity: 1;
             transform: translateY(0);
@@ -195,6 +225,7 @@ Outside of tech, sports and music are how I recharge — both demand the same fo
             opacity: 0;
             transform: translateY(20px);
           }
+
           to {
             opacity: 1;
             transform: translateY(0);

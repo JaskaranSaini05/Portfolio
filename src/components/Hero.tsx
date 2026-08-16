@@ -17,26 +17,52 @@ const Hero = () => {
               <span className="text-blue-600">Singh Saini</span>
             </h1>
 
+            {/* Professional Roles */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-slate-700 font-medium mb-6">
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck size={18} className="text-emerald-600" />
                 Aspiring Cybersecurity Professional
               </span>
+
               <span className="text-slate-300">|</span>
+
               <span className="inline-flex items-center gap-2">
                 <Lock size={18} className="text-blue-600" />
-                Security-Minded Developer
+                Cybersecurity Enthusiast
               </span>
             </div>
 
-            <p className="text-slate-600 mb-6">
-              Bachelor of Computer Application (2022–2025)
+            {/* Education */}
+            <div className="space-y-2 mb-6">
+              <p className="text-base font-medium text-slate-600">
+                <span className="text-slate-800 font-semibold">
+                  Master of Computer Applications (MCA)
+                </span>
+                <span className="mx-2 text-slate-300">·</span>
+                <span className="text-emerald-600 font-medium">
+                  2026–2028
+                </span>
+              </p>
+
+              <p className="text-base font-medium text-slate-600">
+                <span className="text-slate-800 font-semibold">
+                  Bachelor of Computer Application (BCA)
+                </span>
+                <span className="mx-2 text-slate-300">·</span>
+                <span className="text-slate-500">
+                  2022–2025
+                </span>
+              </p>
+            </div>
+
+            {/* Introduction */}
+            <p className="text-xl text-slate-800 font-medium mb-10 leading-relaxed">
+              Passionate about cybersecurity, network security, and secure
+              software development — building practical skills to understand
+              threats, protect systems, and create secure solutions.
             </p>
 
-            <p className="text-xl text-slate-800 font-medium mb-10">
-              Defending systems, breaking down threats, and building software with security at its core.
-            </p>
-
+            {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
@@ -45,6 +71,7 @@ const Hero = () => {
               >
                 Get In Touch
               </a>
+
               <a
                 href="#projects"
                 className="px-7 py-3.5 bg-white text-blue-600 font-semibold rounded-lg border border-blue-200
@@ -58,9 +85,11 @@ const Hero = () => {
           {/* Right: Photo */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              {/* soft ambient glow behind the photo instead of a hard ring */}
+
+              {/* Soft ambient glow behind the photo */}
               <div className="absolute -inset-6 bg-gradient-to-br from-emerald-200/40 via-transparent to-blue-200/30 rounded-full blur-2xl" />
 
+              {/* Profile Image */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full p-1.5 bg-gradient-to-br from-emerald-200 to-white shadow-xl">
                 <img
                   src="/profile.jpg"
@@ -69,16 +98,21 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating badges themed to cybersecurity */}
+              {/* Cybersecurity Badge */}
               <div className="absolute -top-3 -right-3 w-14 h-14 rounded-full bg-emerald-500 shadow-lg flex items-center justify-center">
                 <ShieldCheck size={24} className="text-white" />
               </div>
+
+              {/* Security Badge */}
               <div className="absolute -bottom-3 -left-3 w-14 h-14 rounded-full bg-blue-500 shadow-lg flex items-center justify-center">
                 <Lock size={24} className="text-white" />
               </div>
+
+              {/* Terminal Badge */}
               <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-800 shadow-lg items-center justify-center hidden sm:flex">
                 <Terminal size={20} className="text-white" />
               </div>
+
             </div>
           </div>
 
