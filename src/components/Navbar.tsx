@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import type { MouseEvent } from 'react'
 import { Menu, X, Download, Linkedin, Github, Mail } from 'lucide-react'
 
 const Navbar = () => {
@@ -41,9 +42,13 @@ const Navbar = () => {
     },
   ]
 
-  const handleClick = (e, href) => {
+  const handleClick = (
+    e: MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault()
     const el = document.querySelector(href)
+
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })
       setOpen(false)
@@ -60,7 +65,6 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-
           <div className="flex items-center gap-4">
             <a
               href="#top"
@@ -92,9 +96,9 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className="relative text-sm font-medium text-slate-700 transition-colors hover:text-blue-600
-                           after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
-                           after:bg-blue-600 after:transition-all after:duration-300
+                className="relative text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 
+                           after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+                           after:bg-blue-600 after:transition-all after:duration-300 
                            hover:after:w-full"
               >
                 {item.name}
@@ -105,8 +109,8 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm
-                         font-semibold rounded-lg shadow-sm transition-all duration-200
+              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm 
+                         font-semibold rounded-lg shadow-sm transition-all duration-200 
                          hover:bg-blue-700 hover:shadow-md hover:-translate-y-0.5"
             >
               <Download size={16} />
@@ -160,8 +164,8 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-6 py-3
-                         bg-blue-600 text-white font-semibold rounded-lg
+              className="flex items-center justify-center gap-2 px-6 py-3 
+                         bg-blue-600 text-white font-semibold rounded-lg 
                          transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5"
             >
               <Download size={16} />
