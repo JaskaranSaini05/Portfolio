@@ -32,35 +32,6 @@ const Projects = () => {
       type: 'image',
     },
     {
-      title: 'Eventify – Event Booking App',
-      icon: null,
-      useImageIcon: true,
-      iconImage: '/eventlogo.png',
-      description:
-        'A full-stack event booking application designed to help users explore events, book tickets, and manage reservations through a smooth and responsive mobile experience.',
-      features: [
-        'Developed a complete event discovery and booking workflow with real-time updates',
-        'Implemented secure user authentication using Firebase Authentication',
-        'Integrated Cloud Firestore for storing events, user data, and booking records',
-        'Built a React + TypeScript admin dashboard to manage events and monitor bookings',
-        'Designed a clean, responsive UI with Tailwind CSS for a modern user experience',
-      ],
-      technologies: [
-        'Flutter',
-        'Dart',
-        'Firebase Authentication',
-        'Cloud Firestore',
-        'REST API',
-        'React',
-        'TypeScript',
-        'Tailwind CSS',
-      ],
-      // ✅ VIDEO PLACEHOLDER (ADD YOUR VIDEO LATER)
-      video: '/eventify-demo.mp4',
-      githubLink: 'https://github.com/JaskaranSaini05/Eventify',
-      type: 'video',
-    },
-    {
       title: 'Civic Bridge – Public Issue Reporting System',
       icon: MapPin,
       iconBg: 'bg-purple-600',
