@@ -89,17 +89,23 @@ const Projects = () => {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* CONTENT */}
-                  <div className={`p-6 sm:p-8 ${isEven ? 'order-1' : 'order-2'}`}>
+                  <div
+                    className={`p-6 sm:p-8 ${
+                      isEven ? 'order-1' : 'order-2'
+                    }`}
+                  >
                     <div className="flex items-start gap-4 mb-4">
                       {/* ICON / IMAGE ICON */}
                       <div
                         className={`w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden ${
-                          project.useImageIcon ? 'bg-transparent' : `${project.iconBg}`
+                          project.useImageIcon
+                            ? 'bg-transparent'
+                            : `${project.iconBg}`
                         }`}
                       >
                         {project.useImageIcon ? (
                           <img
-                            src={project.iconImage}
+                            src={project.image}
                             alt="Project Logo"
                             className="w-14 h-14 object-contain"
                           />
@@ -115,7 +121,9 @@ const Projects = () => {
                       </h3>
                     </div>
 
-                    <p className="text-slate-700 mb-6">{project.description}</p>
+                    <p className="text-slate-700 mb-6">
+                      {project.description}
+                    </p>
 
                     {/* Features */}
                     <div className="mb-6">
@@ -181,11 +189,11 @@ const Projects = () => {
                     }`}
                   >
                     <div className="w-full max-w-xl bg-slate-200/60 rounded-2xl p-6 sm:p-8 shadow-inner flex items-center justify-center">
-                      {/* ✅ EVENTIFY VIDEO (VERTICAL) */}
+                      {/* IMAGE FOR PROJECTS */}
                       {project.type === 'video' ? (
                         <div className="mx-auto w-[260px] sm:w-[300px] rounded-[30px] border-4 border-black p-2 bg-black shadow-lg">
                           <video
-                            src={project.video}
+                            src={project.image}
                             autoPlay
                             loop
                             muted
@@ -195,7 +203,6 @@ const Projects = () => {
                           />
                         </div>
                       ) : (
-                        /* ✅ IMAGE FOR OTHER PROJECTS */
                         <img
                           src={project.image}
                           alt={project.title}
